@@ -6,7 +6,7 @@ const Event = prop => {
 
   return (
     <div>
-      
+      Hello from Events!
     </div>
   )
 }

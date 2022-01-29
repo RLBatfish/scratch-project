@@ -22,6 +22,9 @@ const Main = props => {
 
   return (
     <div>
+      <p>
+        hello from main!
+      </p>
       <Info />
       <Month
        

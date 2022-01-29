@@ -5,7 +5,11 @@ import reducers from '../reducers/index';
 
 //populateDataActionCreator
 
-//
+//addEventActionCreator
+
+//deleteEventActionCreator
+
+
 
 /*
 get all data => (dspatch, getstate) => {

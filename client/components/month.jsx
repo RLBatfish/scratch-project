@@ -14,6 +14,7 @@ const Month = props => {
 
   return (
     <div>
+      <p>Hello in Month</p>
       <Planetary />
       <Days />
     </div>

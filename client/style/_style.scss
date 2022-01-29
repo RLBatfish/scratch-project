@@ -1,3 +1,19 @@
 body {
-    background: $lightOrange;
+    background: $lightBlue;
+}
+
+#event-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

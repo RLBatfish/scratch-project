@@ -2,7 +2,9 @@ import React from 'react';
 import Popup from 'reactjs-popup';
 
 const Info = prop => {
-  handleClick
+  const handleClick = () => {
+    console.log('test')
+  }
 
   return (
     <div>
@@ -10,14 +12,36 @@ const Info = prop => {
       <button>Algo of the Day!</button>
       <Popup trigger={<button>Add New Event</button>}>
         <form>
-          <input>Name</input>
-          <input type='date' id='eventDate'>Date</input>
-          <input>Start</input>
-          <input>End</input>
-          <input>Description</input>
-          <input>Location</input>
-          <input>Participants</input>
-          <button type='submit' id='subBut'>Create new Event</button>
+          <fieldset id='popup'>
+            <legend>NEW EVENT</legend>
+            <div id='event-form'>
+              <label>Name: </label>
+              <input type='text' id='eventName' />
+
+              <label>Start Date: </label>
+              <input type='date' id='eventStartDate'/>
+
+              <label>End Date: </label>
+              <input type='date' id='eventEndDate'/>
+
+              <label>Start: </label>
+              <input type='time' id='startTime' />
+
+              <label>End: </label>
+              <input type='time' id='endTime' />
+
+              <label>Description: </label>
+              <input type='text' id='eventDescript' />
+
+              <label>Location: </label>
+              <input type='text' id='eventLocation'/>
+
+              <label>Participants: </label>
+              <input type='text' id='eventPpl' />
+
+              <button type='submit' id='subBut' onClick={handleClick}Create new Event</button>
+            </div>
+          </fieldset>
         </form>
       </Popup>
     </div>

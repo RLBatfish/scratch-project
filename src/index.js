@@ -8,7 +8,7 @@ import style from '../client/style/application.scss';
 
 render(
     <Provider store={store}>
-        <App />, 
+        <App />
     </Provider>,
     document.getElementById('root')
 );

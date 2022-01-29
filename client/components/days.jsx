@@ -8,7 +8,9 @@ const Days = props => {
     
   return (
     <div>
-      <ul>{Events}</ul>
+      {/* <ul>{Events}</ul> */}
+      Hello from Days!
+      <Event />
     </div>
   )
 
