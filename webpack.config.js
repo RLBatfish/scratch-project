@@ -17,7 +17,7 @@ module.exports = {
 
   devServer: {
     proxy: {
-      '/': 'https://localhost:3000',
+      '/api': 'https://localhost:3000',
     },
     static: {
       directory: path.join(__dirname, 'dist'),
