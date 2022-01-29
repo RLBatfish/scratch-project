@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+const Main = () => {
   render() {
     return (
       <div>
-        <Main Container />
+        <Info />
+        <Month />
       </div>
-    );
+    )
   }
-}
+};
 
-export default App;
+export default Main;
