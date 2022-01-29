@@ -39,7 +39,7 @@ const Info = prop => {
               <label>Participants: </label>
               <input type='text' id='eventPpl' />
 
-              <button type='submit' id='subBut' onClick={handleClick}Create new Event</button>
+              <button type='submit' id='subBut' onClick={handleClick}> Create new Event </button>
             </div>
           </fieldset>
         </form>
