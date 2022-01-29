@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import Event from 'event.jsx';
 
 
 const Days = props => {
@@ -13,3 +13,5 @@ const Days = props => {
   )
 
 }
+
+export default Days;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
 const Planetary = () => {
@@ -14,3 +14,5 @@ const Planetary = () => {
     </div>
   )
 }
+
+export default Planetary;

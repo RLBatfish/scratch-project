@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 
 const Event = prop => {
 
@@ -11,3 +10,5 @@ const Event = prop => {
     </div>
   )
 }
+
+export default Event;
