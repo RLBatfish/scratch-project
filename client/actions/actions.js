@@ -3,7 +3,7 @@ import reducers from '../reducers/index';
 
 //what actions do we need here?
 
-//populateDataActionCreator
+//populateDayActionCreator
 
 //addEventActionCreator
 
