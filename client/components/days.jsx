@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Event from 'event.jsx';
+import Event from './event.jsx';
 
 
 const Days = props => {
