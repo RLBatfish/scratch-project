@@ -1,6 +1,6 @@
 import React from 'react';
 import Planetary from './planetary.jsx';
-import Days from '.days.jsx';
+import Days from './days.jsx';
 
 const Month = props => {
 
