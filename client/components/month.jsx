@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 
 const Month = props => {
 
@@ -7,12 +6,12 @@ const Month = props => {
   // populate array with props.days
   // create many Days components
 
-  render() {
+  return (
     <div>
       <Planetary />
       <Days />
     </div>
-  }
+  )
 }
 
 export default Month;
