@@ -2,8 +2,10 @@ import React from 'react';
 import Popup from 'reactjs-popup';
 
 const Info = prop => {
-  const handleClick = () => {
-    console.log('test')
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log('the button does work but it is not the functionality that we want')
   }
 
   return (
@@ -19,16 +21,16 @@ const Info = prop => {
               <input type='text' id='eventName' />
 
               <label>Start Date: </label>
-              <input type='date' id='eventStartDate'/>
+              <input type='datetime-local' id='eventStart'/>
 
               <label>End Date: </label>
-              <input type='date' id='eventEndDate'/>
+              <input type='datetime-local' id='eventEnd'/>
 
-              <label>Start: </label>
+              {/* <label>Start: </label>
               <input type='time' id='startTime' />
 
               <label>End: </label>
-              <input type='time' id='endTime' />
+              <input type='time' id='endTime' /> */}
 
               <label>Description: </label>
               <input type='text' id='eventDescript' />

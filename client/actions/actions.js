@@ -25,3 +25,8 @@ get all data => (dspatch, getstate) => {
 // sendPostFromInfoForm
 
 */
+
+export const databaseTest = () => {
+
+
+}
