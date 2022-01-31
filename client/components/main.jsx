@@ -1,5 +1,4 @@
 import React from 'react';
-import Info from './info.jsx';
 import Month from './month.jsx';
 
 import { connect } from 'react-redux';
@@ -21,14 +20,8 @@ const Main = props => {
 
 
   return (
-    <div>
-      <p>
-        hello from main!
-      </p>
-      <Info />
-      <Month
-       
-      />
+    <div id='main'>
+      <Month/>
     </div>
   )
 };

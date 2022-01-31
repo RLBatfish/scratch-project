@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 const Planetary = () => {
   return (
-    <div>
+    <div id='week'>
       <label>SUN</label>
       <label>MON</label>
       <label>TUE</label>

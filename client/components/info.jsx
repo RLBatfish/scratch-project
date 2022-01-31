@@ -9,8 +9,8 @@ const Info = prop => {
   }
 
   return (
-    <div>
-      <p>Year Month</p>
+    <div id='info'>
+      <p id='yrmo'>Year Month</p>
       <button>Algo of the Day!</button>
       <Popup trigger={<button>Add New Event</button>}>
         <form>

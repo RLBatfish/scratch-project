@@ -1,5 +1,5 @@
 body {
-    background: radial-gradient($lightBlue, $lightPruple);
+    background: radial-gradient($lightPurple, $greyBlue);
 }
 
 #event-form {
@@ -16,4 +16,53 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#main {
+    display: grid;
+    height: auto;
+    width: auto;
+    border: solid
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#yrmo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+#week {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#month {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: auto;
+    width: auto;
+}
+
+#day {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    width: auto;
 }

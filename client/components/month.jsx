@@ -1,6 +1,7 @@
 import React from 'react';
-import Planetary from './planetary.jsx';
+import Popup from 'reactjs-popup';
 import Days from './days.jsx';
+import Events from './event.jsx';
 
 const Month = props => {
 
@@ -11,12 +12,14 @@ const Month = props => {
   //component did mount
     //make a fetch call to our backend at /api
     
+  const dayArr = [];
+  for (let i = 0; i < 32; i++) {
+    dayArr.push(<Days key={i} />)
+  }
 
   return (
-    <div>
-      <p>Hello in Month</p>
-      <Planetary />
-      <Days />
+    <div id='month'>
+      {dayArr}
     </div>
   )
 }
