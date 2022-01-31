@@ -10,19 +10,25 @@ body {
     align-items: center;
 }
 
-.popup-content {
+#popup {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $ash;
+}
+
+legend {
+    color: $lightGrey;
 }
 
 #main {
     display: grid;
-    height: auto;
-    width: auto;
-    border: solid
+    min-height: 500px;
+    min-width: 400px;
+    border: solid;
+    border-color: $lightGrey;
 }
 
 #info {
@@ -37,6 +43,7 @@ body {
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    color: $lightGrey;
 }
 
 #week {
@@ -50,6 +57,7 @@ label {
     display: flex;
     justify-content: center;
     align-content: center;
+    color: $lightGrey;
 }
 
 #month {
