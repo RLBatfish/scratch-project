@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const dateController = require('../controllers/dateController.js');
 
 //front end should call router at api endpoint to populate
 //grid with days
@@ -8,13 +8,15 @@ const router = express.Router();
 //front end should call router at api/event to populate db
 //receives response back from db and sends in response back to front end
 
-router.get('/', (req, res) => {
-    console.log('we have a res.body = ', res.body)
-    return res.status(200).json(res.body)
-    })
+router.get('/', dateController.getEvents, (req, res) => {
+  // console.log('req.body', req.body)
+  // console.log('we have a res.body = ', res.locals.events)
+  return res.status(200) //.send(res.locals.events);
+});
 
-router.post('/event', (req, res) => {
-  return res.status(200).send('Hello from post request');
-})
+router.post('/event', dateController.newEvent, (req, res) => {
+  console.log('after middlewear', res.locals.newEvent);
+  return res.status(200) //.send(res.locals.nwEvent);
+});
 
 module.exports = router;
