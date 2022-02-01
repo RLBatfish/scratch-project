@@ -17,10 +17,7 @@ const apiRouter = require('./routes/api');
 
 
 
-app.get('/', (req, res, err) => {
-  if (err) {
-    console.log('there is an error');
-  }
+app.get('/', (req, res) => {
   return res.status(200).send('Hello from the server!');
 });
 

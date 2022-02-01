@@ -1,14 +1,15 @@
 import React from 'react';
-import Info from './info.jsx';
 import Month from './month.jsx';
 
 import { connect } from 'react-redux';
 
 import * as actions from '../actions/actions';
 
-const mapstatetoprops = state => ({
-  month: state.calendar.month
+const mapStateToProps = state => ({
+  month: state.calendar.month,
+  days: state.calendar.days
 })
+
 
 const Main = props => {
 
@@ -17,20 +18,17 @@ const Main = props => {
     // month = calendar.state.month
   //}
 
-  // component did mout 
+  // component did mout
 
 
   return (
-    <div>
-      <p>
-        hello from main!
-      </p>
-      <Info />
+    <div id='main'>
       <Month
-       
+      month={props.month}
+      days={props.days}
       />
     </div>
   )
 };
 
-export default Main;
+export default connect(mapStateToProps, null)(Main)
