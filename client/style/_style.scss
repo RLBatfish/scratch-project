@@ -1,0 +1,137 @@
+body {
+    background: radial-gradient($lightPurple, $greyBlue);
+}
+
+#event-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $ash;
+}
+
+legend {
+    color: $lightGrey;
+}
+
+#main {
+    display: grid;
+    min-height: 500px;
+    min-width: 400px;
+    border: solid;
+    border-color: $lightGrey;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#yrmo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    color: $lightGrey;
+    font-size: 24px;
+}
+
+#week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: grid;
+    // grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    align-content: center;
+    color: $lightGrey;
+}
+
+#month {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: auto;
+    width: auto;
+}
+
+.day {
+    // display: flex;
+    // justify-content: center;
+    // align-content: center;
+    // flex-direction: column;
+    // border: solid 2px $lightGrey;
+    // margin: 1px;
+    // padding-top: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: solid 2px $lightGrey;
+    margin: 1px;
+}
+
+#date-number {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding-bottom: 0px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: $lightGrey;
+
+
+}
+
+#date-number {
+    float: left;
+    padding-left: 10px;
+}
+
+#eventButton {
+    display: flex;
+    justify-content: center;
+    align-content: bottom;
+
+}
+
+.eventButton {
+    border-radius: 50%;
+    border: white;
+    background-color: rgba(245, 245, 245, 0.842);
+    margin-bottom: 10px;
+}
+
+#eventPop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color: $ash;
+    color: whitesmoke;
+}
+
+#detailPop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $ash;
+}
