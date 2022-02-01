@@ -19,25 +19,17 @@ export const addEventActionCreator = (nameField, startField, endField, descripti
     payload: nameField, startField, endField, descriptionField, locationField, participantsField,
 });
 
+export const populateDaysActionCreator = (array) => ({
+    type: types.POPULATE_DAYS,
+    payload: array
+})
+
+export const switchSyncActionCreator = () => ({
+    type: types.SWITCH_SYNC,
+    payload: true
+})
+
+
 //deleteEventActionCreator
 
 
-
-/*
-get all data => (dspatch, getstate) => {
-    axios ('/api){
-        post
-        headers
-        body: req
- }
-    .then (( async dispatch to populate state))
-}
-
-
-// sendPostFromInfoForm
-
-*/
-
-// export const getDataTest = () => (dispatch, getState) => {
-
-// }

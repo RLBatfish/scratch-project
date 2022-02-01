@@ -68,10 +68,16 @@ label {
     width: auto;
 }
 
-#day {
+.day {
     display: grid;
     justify-content: center;
     align-content: center;
     height: auto;
     width: auto;
+    border: solid 2px $lightGrey;
+    margin: 1px
+}
+
+.eventButton {
+    border-radius: 50%;
 }

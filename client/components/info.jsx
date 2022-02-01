@@ -14,20 +14,25 @@ const Info = props => {
     location #eventLocation
     participants #eventPpl
     */
-    console.log('the button does work')
+    console.log('curent state', props)
   }
 
-  const nameField = document.querySelector('#eventName');
-  const startField = document.querySelector('#eventStart');
-  const endField = document.querySelector('#eventEnd');
-  const descriptionField = document.querySelector('#eventDescript');
-  const locationField = document.querySelector('#eventLocation');
-  const participantsField = document.querySelector('#eventPpl');
 
   const setEventInfo = (e) => {
+
+    const nameField = document.querySelector('#eventName');
+    const startField = document.querySelector('#eventStart');
+    const endField = document.querySelector('#eventEnd');
+    const descriptionField = document.querySelector('#eventDescript');
+    const locationField = document.querySelector('#eventLocation');
+    const participantsField = document.querySelector('#eventPpl');
     //get current field values & pass into addEvent
     //props.addEvent(nameField.value, startField.value, endField.value, descriptionField.value, locationField.value, participantsField.value);
-    e.preventDefault()
+    e.preventDefault();
+    console.log('add event button was clicked');
+    console.log('this is the synthetic event', e);
+    console.log('this is the nameField: ',nameField);
+
 
     //testing the backend
     function addTestEvent(nameF, startF, endF, descriptionF, locationF, participantsF) {
@@ -40,6 +45,7 @@ const Info = props => {
         participantsF,
       };
       console.log(body);
+
       
       fetch('/api/event', {
         method: 'POST',
@@ -73,7 +79,7 @@ const Info = props => {
             <legend>NEW EVENT</legend>
             <div id='event-form'>
               <label>Name: </label>
-              <input type='text' id='eventName' />
+              <input type='text' id='eventName'/>
               <label>Start Date: </label>
               <input type='datetime-local' id='eventStart'/>
 

@@ -9,14 +9,26 @@ const dateController = require('../controllers/dateController.js');
 //receives response back from db and sends in response back to front end
 
 router.get('/', dateController.getEvents, (req, res) => {
-  // console.log('req.body', req.body)
-  // console.log('we have a res.body = ', res.locals.events)
-  return res.status(200) //.send(res.locals.events);
+  return res.status(200).send(res.locals.events);
 });
 
 router.post('/event', dateController.newEvent, (req, res) => {
-  console.log('after middlewear', res.locals.newEvent);
-  return res.status(200) //.send(res.locals.nwEvent);
+  console.log(res.locals.newEvent);
+  return res.status(200).send(res.locals.newEvent);
+});
+
+
+
+
+router.use((req, res, next, err) => {
+  const defaultErr = {
+    log: 'Express error handler caught unknown middleware error',
+    status: 500,
+    message: { err: 'An error occurred' },
+  };
+  const errorObj = Object.assign({}, defaultErr, err);
+  console.log(errorObj.log);
+  return res.status(errorObj.status).json(errorObj.message);
 });
 
 module.exports = router;

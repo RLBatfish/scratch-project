@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
 const mapStateToProps = state => ({
-  month: state.calendar.month
+  month: state.calendar.month,
+  days: state.calendar.days
 })
 
 
@@ -23,7 +24,8 @@ const Main = props => {
   return (
     <div id='main'>
       <Month
-      dbTest={props.getDataTest}
+      month={props.month}
+      days={props.days}
       />
     </div>
   )

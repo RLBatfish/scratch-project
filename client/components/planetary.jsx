@@ -15,7 +15,7 @@ const Planetary = () => {
   const weekArr = [];
 
   for (const key in week) {
-    weekArr.push(<label id={key}>{week[key]}</label>)
+    weekArr.push(<label key={key} id={key}>{week[key]}</label>)
   }
 
   return (

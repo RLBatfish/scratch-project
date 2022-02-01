@@ -1,18 +1,32 @@
-import * as types from '../constant/actionTypes.js';
+import * as types from '../constant/actionTypes';
 
 
 
 const initialState = {
     month: 'January',
     days: [],
+    sync: false,
+
 };
 
 const calendarReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case types.POPULATE_DAYS:
 
-    switch (action.types) {
+            return {
+                ...state,
+                days: action.payload,
+                sync: true
+            };
+    
+        
+        case types.SWITCH_SYNC:
+            return {
+                ...state,
+                sync : action.payload,
+            }
 
-        case types.ADD_EVENT:
-     
+        
 
 
 
