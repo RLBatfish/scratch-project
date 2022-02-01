@@ -44,6 +44,7 @@ legend {
     align-content: center;
     flex-direction: row;
     color: $lightGrey;
+    font-size: 24px;
 }
 
 #week {
@@ -69,15 +70,68 @@ label {
 }
 
 .day {
+    // display: flex;
+    // justify-content: center;
+    // align-content: center;
+    // flex-direction: column;
+    // border: solid 2px $lightGrey;
+    // margin: 1px;
+    // padding-top: 0;
     display: grid;
-    justify-content: center;
-    align-content: center;
-    height: auto;
-    width: auto;
+    grid-template-rows: 1fr 1fr;
     border: solid 2px $lightGrey;
-    margin: 1px
+    margin: 1px;
+}
+
+#date-number {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding-bottom: 0px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: $lightGrey;
+
+
+}
+
+#date-number {
+    float: left;
+    padding-left: 10px;
+}
+
+#eventButton {
+    display: flex;
+    justify-content: center;
+    align-content: bottom;
+
 }
 
 .eventButton {
     border-radius: 50%;
+    border: white;
+    background-color: rgba(245, 245, 245, 0.842);
+    margin-bottom: 10px;
+}
+
+#eventPop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color: $ash;
+    color: whitesmoke;
+}
+
+#detailPop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $ash;
 }

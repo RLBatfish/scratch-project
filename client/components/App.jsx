@@ -20,7 +20,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   // getDataTest: () => dispatch(actions.getDataTest()),
   populateDays: (array) => dispatch(actions.populateDaysActionCreator(array)),
-  addEvent: (...args) => dispatch(actions.addEventActionCreator(...args)),
+  addEvent: (array) => dispatch(actions.addEventActionCreator(array)),
   switchSync: () => dispatch(actions.switchSyncActionCreator()),
 })
 
@@ -59,6 +59,8 @@ const App = props => {
       addEvent={props.addEvent}
       value={props.value}
       days={props.days}
+      switchSync={props.switchSync}
+      sync={props.sync}
       
       />
       <Planetary />

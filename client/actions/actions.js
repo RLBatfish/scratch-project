@@ -14,9 +14,9 @@ import axios from 'axios';
     location #eventLocation
     participants #eventPpl
     */
-export const addEventActionCreator = (nameField, startField, endField, descriptionField, locationField, participantsField) => ({
+export const addEventActionCreator = (array) => ({
     type: types.ADD_EVENT,
-    payload: nameField, startField, endField, descriptionField, locationField, participantsField,
+    payload: array[0]
 });
 
 export const populateDaysActionCreator = (array) => ({

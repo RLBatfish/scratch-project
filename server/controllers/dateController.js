@@ -15,7 +15,7 @@ const dateController = {
   },
 
   newEvent: function (req, res, next) {
-    const { nameF, startF, endF, descriptionF, locationF, participantsF } = req.body;
+    let { nameF, startF, endF, descriptionF, locationF, participantsF } = req.body;
 
     db.query(`INSERT INTO events (calendar_id, description, name, start_date, end_date, location, participants)
       VALUES ('2', '${descriptionF}', '${nameF}', '${startF}', '${endF}', '${locationF}', '${participantsF}')

@@ -20,7 +20,7 @@ router.post('/event', dateController.newEvent, (req, res) => {
 
 
 
-router.use((req, res, next, err) => {
+router.use((req, res, err) => {
   const defaultErr = {
     log: 'Express error handler caught unknown middleware error',
     status: 500,
@@ -28,7 +28,7 @@ router.use((req, res, next, err) => {
   };
   const errorObj = Object.assign({}, defaultErr, err);
   console.log(errorObj.log);
-  return res.status(errorObj.status).json(errorObj.message);
+  res.send(errorObj);
 });
 
 module.exports = router;

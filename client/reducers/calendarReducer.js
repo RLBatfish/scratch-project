@@ -23,10 +23,17 @@ const calendarReducer = (state = initialState, action) => {
         case types.SWITCH_SYNC:
             return {
                 ...state,
-                sync : action.payload,
-            }
+                sync : !state.sync,
+            };
 
-        
+        case types.ADD_EVENT:
+            const daysArr = [...days];
+            daysArr.push(action.payload);
+            console.log('this is in the ADD_EVENT reducer: ', daysArr);
+            return {
+                ...state,
+                days: daysArr,
+            };
 
 
 

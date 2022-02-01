@@ -6,15 +6,10 @@ const Info = props => {
   
   const handleClick = (e) => {
     e.preventDefault();
-    //function to send form data back 
-    /*input fields: name, #eventName
-    start date #eventStart
-    end date #eventEnd
-    description #eventDescript
-    location #eventLocation
-    participants #eventPpl
-    */
-    console.log('curent state', props)
+    const urlWill = 'https://media-exp1.licdn.com/dms/image/C4E03AQHWkrH8zH7aUg/profile-displayphoto-shrink_800_800/0/1619436356473?e=1649289600&v=beta&t=IwPF93lPqURLxngFGIGJ0zExMPUVbaDPX_BLYo7DaZM'
+    fetch(urlWill, {
+      
+    })
   }
 
 
@@ -57,6 +52,14 @@ const Info = props => {
       .then( (response) => response.json())
       .then( (data) => {
         console.log('Success!', data);
+        //once response is back, trigger dispatch and add to days array
+        props.addEvent(data);
+
+
+      })
+      .then(()=> {
+        props.switchSync();
+        console.log(props);
       })
       .catch( (error) => {
         console.error('Error:', error);
@@ -71,7 +74,7 @@ const Info = props => {
 
   return (
     <div id='info'>
-      <p id='yrmo'>Year Month</p>
+      <p id='yrmo'>January 2022</p>
       
       <Popup trigger={<button>Add New Event</button>}>
         <form>
